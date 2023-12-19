@@ -1,0 +1,197 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.124.976.0 (23.12)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Region\",\"State\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "DynamicImprovement": "HighConfidence",
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "20f51f91-de0d-4bf3-913a-c7e6f02e05d7",
+        "annotations": [
+          {
+            "name": "PBI_IsFromSource",
+            "value": "FS"
+          }
+        ],
+        "fromColumn": "RegionID",
+        "fromTable": "State",
+        "toColumn": "RegionID",
+        "toTable": "Region"
+      }
+    ],
+    "sourceQueryCulture": "it-IT",
+    "tables": [
+      {
+        "name": "Region",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "RegionID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a6f19f9e-f337-423c-a860-192203aa12ca",
+            "sourceColumn": "RegionID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RegionName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "64a2213a-89cc-4c9f-8761-e3887be79c09",
+            "sourceColumn": "RegionName",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "d36a9e1b-f82b-406f-b81a-7da8d58358bb",
+        "partitions": [
+          {
+            "name": "Region",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"matusalab02a.database.windows.net\", \"Tailspintoys\"),",
+                "    dbo_Region = Source{[Schema=\"dbo\",Item=\"Region\"]}[Data]",
+                "in",
+                "    dbo_Region"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "State",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "StateID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "beb6d0a2-fe5c-4938-914f-d718d23cf518",
+            "sourceColumn": "StateID",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "StateCode",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aea62752-8b35-4950-9cee-edeed4b8b0c6",
+            "sourceColumn": "StateCode",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "StateName",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bf9afdd1-bc37-4b91-b548-36b4fc9380a0",
+            "sourceColumn": "StateName",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RegionID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "c9523ba0-aa03-4a16-9c21-c2d44f550cf9",
+            "sourceColumn": "RegionID",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "55e3d887-0d0e-42b7-8dd2-cf87c6df19d2",
+        "partitions": [
+          {
+            "name": "State",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(\"matusalab02a.database.windows.net\", \"Tailspintoys\"),",
+                "    dbo_State = Source{[Schema=\"dbo\",Item=\"State\"]}[Data]",
+                "in",
+                "    dbo_State"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
