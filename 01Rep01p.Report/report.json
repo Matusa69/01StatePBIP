@@ -43,6 +43,15 @@
           "x": 597.93,
           "y": 123.67,
           "z": 1.00
+        },
+        {
+          "config": "{\"name\":\"80ccd4e9532b3b719e00\",\"layouts\":[{\"id\":0,\"position\":{\"x\":923.1689588453695,\"y\":219.54714218480365,\"z\":2,\"width\":278.45003399048267,\"height\":279.5209956596768,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"State.StateName\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"s\",\"Entity\":\"State\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"StateName\"},\"Name\":\"State.StateName\",\"NativeReferenceName\":\"StateName\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"s\"}},\"Property\":\"StateName\"}}}]},\"autoSelectVisualType\":true,\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 279.52,
+          "width": 278.45,
+          "x": 923.17,
+          "y": 219.55,
+          "z": 2.00
         }
       ],
       "width": 1280.00

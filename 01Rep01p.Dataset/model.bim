@@ -90,6 +90,21 @@
             "lineageTag": "64a2213a-89cc-4c9f-8761-e3887be79c09",
             "sourceColumn": "RegionName",
             "summarizeBy": "none"
+          },
+          {
+            "name": "NewColA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "\"A\"",
+            "isDataTypeInferred": true,
+            "lineageTag": "810ff9d4-8cd4-4e44-9884-ca9ab51d38d2",
+            "summarizeBy": "none",
+            "type": "calculated"
           }
         ],
         "lineageTag": "d36a9e1b-f82b-406f-b81a-7da8d58358bb",
